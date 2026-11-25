@@ -10,14 +10,14 @@ cask "greenroom" do
   desc "Personal interview and presentation trainer with realtime voice mock sessions"
   homepage "https://github.com/daut/greenroom"
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Greenroom.app"
 
-  # Unsigned build: clear quarantine so Gatekeeper allows the first launch.
-  postflight do
-    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/Greenroom.app"]
-  end
+  caveats <<~EOS
+    Greenroom isn't signed with an Apple Developer ID yet. Before the first launch, run:
+      xattr -dr com.apple.quarantine "#{appdir}/Greenroom.app"
+  EOS
 
   zap trash: [
     "~/Library/Application Support/Greenroom",
