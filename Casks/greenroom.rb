@@ -15,7 +15,7 @@ cask "greenroom" do
   app "Greenroom.app"
 
   caveats <<~EOS
-    Greenroom isn't signed with an Apple Developer ID yet. Before the first launch, run:
+    Greenroom isn't notarized by Apple. Before the first launch, run:
       xattr -dr com.apple.quarantine "#{appdir}/Greenroom.app"
   EOS
 
