@@ -10,7 +10,7 @@ cask "greenroom" do
   desc "Personal interview and presentation trainer with realtime voice mock sessions"
   homepage "https://github.com/daut/greenroom"
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Greenroom.app"
 
