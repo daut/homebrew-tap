@@ -1,9 +1,9 @@
 cask "greenroom" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.1.14"
-  sha256 arm:   "bde7d81fe6be37bf1180272abca48af0398d1c6c7deb141af3644f9185a4181b",
-         intel: "8fb319dd8ba1376ff5a673dd8f866f1e121600fe02ff803222d4162c2b23d609"
+  version "0.1.15"
+  sha256 arm:   "41b5158b434b1780c1a800df32b0d93b2e9997a2f869c4297a2d834384dd2f39",
+         intel: "14cf423a6563d5bab6ea7e39418b201654d313cd8931f79e57c9ef5b5ffe56f9"
 
   url "https://github.com/daut/greenroom/releases/download/v#{version}/greenroom-mac-#{arch}.zip"
   name "Greenroom"
